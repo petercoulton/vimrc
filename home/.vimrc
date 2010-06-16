@@ -34,3 +34,9 @@
 
 ",V reloads it -- making all changes active (have to save first)
   map <silent> ,V :w<CR>:source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" Switch between next next and previous buffer
+  map <F1> :bprevious<CR>
+  map <F2> :bnext<CR>
+  map <F3> :b#<CR>
+  map <F4> :clo<CR>
