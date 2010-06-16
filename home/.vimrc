@@ -21,3 +21,9 @@
   set mouse=a         " Double-click |bars| in help files
 
   set ttyfast         " Tell vim this is a fast terminal don't hold back
+
+
+  if has("autocmd")
+    autocmd Filetype java setlocal ts=4 sw=4 noexpandtab
+    autocmd Filetype javascript setlocal ts=4 sw=4
+  end
