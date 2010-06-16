@@ -27,3 +27,10 @@
     autocmd Filetype java setlocal ts=4 sw=4 noexpandtab
     autocmd Filetype javascript setlocal ts=4 sw=4
   end
+
+
+",v brings up .vimrc
+  map ,v :sp ~/.vimrc<CR><C-W>_
+
+",V reloads it -- making all changes active (have to save first)
+  map <silent> ,V :w<CR>:source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
