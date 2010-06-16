@@ -35,6 +35,9 @@
 ",V reloads it -- making all changes active (have to save first)
   map <silent> ,V :w<CR>:source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" Toggle display hidden characters
+  map <F8> :set list!<CR>
+
 " Switch between next next and previous buffer
   map <F1> :bprevious<CR>
   map <F2> :bnext<CR>
