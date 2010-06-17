@@ -43,3 +43,8 @@
   map <F2> :bnext<CR>
   map <F3> :b#<CR>
   map <F4> :clo<CR>
+
+  if has("gui_running")
+    colorscheme native
+  end
+
