@@ -13,36 +13,41 @@
 
   set number          " Display line numbers
   set ruler           " Show cursor position in status bar
+  set showcmd
+  set cmdheight=2
 
   set laststatus=2   " Always show the status line
 
-  set scrolloff=3     " Keep 3 lines when paging
+  set scrolloff=7     " Keep 7 lines when paging
 
   set mouse=a         " Double-click |bars| in help files
 
   set ttyfast         " Tell vim this is a fast terminal don't hold back
 
 
+  "  set backspace=indent,eol,start
+  set listchars=tab:>-,trail:-,eol:¶
+
   if has("autocmd")
     autocmd Filetype java setlocal ts=4 sw=4 noexpandtab
     autocmd Filetype javascript setlocal ts=4 sw=4
   end
 
-
-",v brings up .vimrc
+  " Edit the vimrc file
+  map ,e :e ~/.vimrc<CR>
+  " Edit the vimrc file in a split
   map ,v :sp ~/.vimrc<CR><C-W>_
+  " Reload the vimrc file
+  map ,u :source ~/.vimrc<CR>
 
-",V reloads it -- making all changes active (have to save first)
-  map <silent> ,V :w<CR>:source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-" Toggle display hidden characters
+  " Toggle display hidden characters
   map <F8> :set list!<CR>
 
-" Switch between next next and previous buffer
-  map <F1> :bprevious<CR>
+  " Switch between next next and previous buffer
+  map <F1> :bprev<CR>
   map <F2> :bnext<CR>
   map <F3> :b#<CR>
-  map <F4> :clo<CR>
+  map <F4> :bwipe<CR>
 
   inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
   \ "\<lt>C-n>" :
@@ -53,5 +58,6 @@
 
   if has("gui_running")
     colorscheme native
+    set lines=40 columns=105
   end
 
