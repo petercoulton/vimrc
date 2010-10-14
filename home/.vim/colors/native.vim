@@ -53,3 +53,7 @@ hi DiffChange	ctermbg=5
 hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
 hi DiffText	    cterm=bold ctermbg=1
 
+" Invisible character colours
+hi NonText guifg=#333333 guibg=#222222
+hi SpecialKey guifg=#333333 guibg=#222222
+
