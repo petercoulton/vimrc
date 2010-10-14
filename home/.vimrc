@@ -22,7 +22,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set cmdheight=2
-set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=\ \[%b\]\[0x%B\]\ Pos:%v,%l\ Line:%c,%l\ %P
+set statusline=%<%F%h%m%r%h%w%y%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}\ %{&ff}%=\ \[%b\]\[0x%B\]\ Pos:%v,%l\ Line:%c,%l\ %P
 set number
 set virtualedit=all
 "set relativenumber
