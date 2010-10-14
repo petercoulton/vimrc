@@ -83,6 +83,7 @@ nnoremap k gk
 
 "{{{ GVim Stuff
 if has("gui_running")
+  set guioptions=-m
   colorscheme native
   set cursorline
 endif
