@@ -29,7 +29,7 @@ hi StatusLine   guifg=white guibg=#8090a0 gui=bold
 hi StatusLineNC guifg=#506070 guibg=#a0b0c0
 hi VertSplit    guifg=#a0b0c0 guibg=#a0b0c0
 hi Folded       guifg=#111111 guibg=#8090a0
-hi IncSearch	guifg=slategrey guibg=khaki
+hi IncSearch    guifg=slategrey guibg=khaki
 
 " Specials
 hi Todo         guifg=#e50808 guibg=#520000 gui=bold
@@ -56,4 +56,7 @@ hi DiffText	    cterm=bold ctermbg=1
 " Invisible character colours
 hi NonText guifg=#333333 guibg=#222222
 hi SpecialKey guifg=#333333 guibg=#222222
+
+" CursorLine
+hi CursorLine guibg=#1A1A1A
 
