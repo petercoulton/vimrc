@@ -1,63 +1,91 @@
 
-set nocompatible    " This will make Vim behave a bit better, but less Vi compatible
+"{{{ Make plugins easier to handle with pathogen
+filetype off
+call pathogen#runtime_append_all_bundles('bundles')
+filetype plugin indent on
+"}}}
 
-set tabstop=2       " Make tabs 2 spaces wide
-set shiftwidth=2    "    
-set smarttab        " 
-set expandtab       " 
+"{{{ Basics
+set nocompatible
+set modelines=0
 
-set virtualedit=all " Virtual Whitespace
-
-set autoindent      " Use the current indent level for new lines
-set smartindent     " Allow Vim to guess the next lines indent level based on context
-
-set number          " Display line numbers
-set ruler           " Show cursor position in status bar
+set encoding=utf-8
+set scrolloff=7
+set autoindent
+set showmode
 set showcmd
-set cmdheight=2
+set hidden            " Hide buffers when switching instead of closing them
+set wildmenu          " Turn on improved command autocompletion
+"set visualbell
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set number
+"set relativenumber
+"set undofile
+"}}}
 
-set laststatus=2   " Always show the status line
+"{{{ Tabs
+set tabstop=2         " Sets the width of a tab character
+set shiftwidth=2
+set softtabstop=2
+set expandtab         " Causes spaces to be inserted instead of tabs
+"}}}
 
-set scrolloff=7     " Keep 7 lines when paging
+"{{{ Movement
 
-set mouse=a         " Double-click |bars| in help files
+"}}}
 
-set ttyfast         " Tell vim this is a fast terminal don't hold back
+"{{{ Long line handling
+set wrap
+set textwidth=79
+set formatoptions=qrnl
+"set colorcolumn=85
+"}}}
 
+"{{{ Show Hidden Characters
+set list
+set listchars=tab:▸\ ,eol:¬,trail:.
+"}}}
 
-"  set backspace=indent,eol,start
-set listchars=tab:>-,trail:-,eol:¶
+"{{{ Code Folding
+set foldlevelstart=99
+set foldmethod=marker
+"}}}
 
-if has("autocmd")
-  autocmd Filetype java setlocal ts=4 sw=4 noexpandtab
-  autocmd Filetype javascript setlocal ts=4 sw=4
-end
+au FocusLost * :wa
 
-" Edit the vimrc file
-map ,e :e ~/.vimrc<CR>
-" Edit the vimrc file in a split
-map ,v :sp ~/.vimrc<CR><C-W>_
-" Reload the vimrc file
-map ,u :source ~/.vimrc<CR>
+"{{{ Leader mappings
+let mapleader=","
 
-" Toggle display hidden characters
-map <F8> :set list!<CR>
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" Switch between next next and previous buffer
-map <F1> :bprev<CR>
-map <F2> :bnext<CR>
-map <F3> :b#<CR>
-map <F4> :bwipe<CR>
+nmap <silent> <leader>q :bwipe<CR>
 
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-\ "\<lt>C-n>" :
-\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
+nmap <silent> <leader>v "+gP<CR>
+"}}}
 
+"{{{ Key mappings  
+inoremap jj <ESC>
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+nnoremap j gj
+nnoremap k gk
+"}}}
+
+"{{{ GVim Stuff
 if has("gui_running")
   colorscheme native
-  set lines=40 columns=105
-end
+  set cursorline
+endif
+"}}}
+
 
