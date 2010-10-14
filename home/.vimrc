@@ -22,6 +22,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set number
+set virtualedit=all
 "set relativenumber
 "set undofile
 "}}}
