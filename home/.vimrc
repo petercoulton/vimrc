@@ -9,6 +9,8 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
+set wildignore=*.class
+
 set encoding=utf-8
 set scrolloff=7
 set autoindent
