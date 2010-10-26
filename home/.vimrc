@@ -1,7 +1,7 @@
 
 "{{{ Make plugins easier to handle with pathogen
 filetype off
-call pathogen#runtime_append_all_bundles('bundles')
+call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 "}}}
 
