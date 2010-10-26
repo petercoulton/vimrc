@@ -68,6 +68,10 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 nmap <silent> <leader>q :bwipe<CR>
+nmap <silent> <leader>w :w<CR>
+
+nmap <silent> <leader>n :bnext<CR>
+nmap <silent> <leader>p :bprev<CR>
 
 nmap <silent> <leader>v "+gP<CR>
 "}}}
@@ -93,5 +97,7 @@ if has("gui_running")
   set cursorline
 endif
 "}}}
+
+
 
 
