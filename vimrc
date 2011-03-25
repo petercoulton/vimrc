@@ -16,6 +16,9 @@ call pathogen#runtime_append_all_bundles()
 
 syntax on
 filetype plugin indent on
+
+let mapleader=','
+
 set history=1000
 set shiftwidth=2
 set softtabstop=2
