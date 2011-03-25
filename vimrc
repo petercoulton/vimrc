@@ -28,7 +28,7 @@ set virtualedit=all
 set cursorline
 set backspace=indent,eol,start
 
-set list
+"set list
 set listchars=tab:▷⋅
 set listchars+=trail:⋅
 set listchars+=nbsp:.
