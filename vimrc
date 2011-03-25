@@ -44,9 +44,10 @@ set laststatus=2
 
 
 syntax on
-colorscheme molokai2
+colorscheme grb2
 
 if has("gui_running")
+  colorscheme molokai2
   set guifont=DejaVu\ Sans\ Mono\ 10
 endif
 
