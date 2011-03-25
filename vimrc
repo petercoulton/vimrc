@@ -37,6 +37,9 @@ nmap <leader>l :set list!<cr>
 set number
 set ruler
 set hidden
+nmap <leader>d :bd<cr>
+nmap <leader>n :bn<cr>
+nmap <leader>p :bp<cr>
 
 set cmdheight=2
 set laststatus=2
