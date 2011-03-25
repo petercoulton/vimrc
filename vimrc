@@ -25,7 +25,6 @@ set softtabstop=2
 set expandtab
 set autoindent
 set virtualedit=all
-set cursorline
 set backspace=indent,eol,start
 
 "set list
@@ -47,6 +46,7 @@ syntax on
 colorscheme grb2
 
 if has("gui_running")
+  set cursorline
   colorscheme molokai2
   set guifont=DejaVu\ Sans\ Mono\ 10
 endif
