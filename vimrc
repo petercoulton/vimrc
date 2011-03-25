@@ -33,6 +33,7 @@ set listchars=tab:▷⋅
 set listchars+=trail:⋅
 set listchars+=nbsp:.
 set listchars+=eol:¶
+nmap <leader>l :set list!<cr>
 
 set number
 set ruler
