@@ -62,6 +62,10 @@ set cmdheight=2
 set laststatus=2
 
 
+nmap <silent> <leader>rb :set syn=ruby<cr>
+nmap <silent> <leader>hl :set syn=haml<cr>
+nmap <silent> <leader>sh :set syn=bash<cr>
+
 syntax on
 colorscheme grb2
 
