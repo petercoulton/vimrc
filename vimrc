@@ -62,6 +62,9 @@ set cmdheight=2
 set laststatus=2
 
 
+nmap <leader>r :so $MYVIMRC<cr>
+nmap <leader>e :e $MYVIMRC<cr>
+
 nmap <silent> <leader>rb :set syn=ruby<cr>
 nmap <silent> <leader>hl :set syn=haml<cr>
 nmap <silent> <leader>sh :set syn=bash<cr>
