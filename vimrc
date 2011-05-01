@@ -43,6 +43,21 @@ nmap <silent> <leader>D :bd!<cr>
 nmap <silent> <leader>n :bn<cr>
 nmap <silent> <leader>p :bp<cr>
 
+" Status Line
+set statusline=
+set statusline+=%<      " 
+set statusline+=%f      " Filename
+
+set statusline+=\ %y    " Filetype
+set statusline+=%m      " Modified flag
+
+set statusline+=%=      " Left/Right seperator
+
+set statusline+=%02b:0x%02B
+
+set statusline+=\ [%03c,%03l/%03L]
+set statusline+=\ %P
+
 set cmdheight=2
 set laststatus=2
 
