@@ -78,6 +78,10 @@ if has("gui_running")
   set cursorline
   colorscheme molokai2
   set guifont=DejaVu\ Sans\ Mono\ 10
+
+  highlight iCursor guifg=white guibg=steelblue
+  set guicursor=n-v-c:block-Cursor
+  set guicursor+=i:ver1-iCursor
 endif
 
 
