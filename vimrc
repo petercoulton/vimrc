@@ -66,9 +66,10 @@ nmap <leader>e :e $MYVIMRC<cr>
 
 nmap <leader>f :CommandTFlush<cr>
 
-nmap <silent> <leader>rb :set syn=ruby<cr>
-nmap <silent> <leader>hl :set syn=haml<cr>
-nmap <silent> <leader>sh :set syn=bash<cr>
+nmap <silent> <leader>rb :setf ruby<cr>
+nmap <silent> <leader>hl :setf haml<cr>
+nmap <silent> <leader>sh :setf bash<cr>
+nmap <silent> <leader>cc :setf cucumber<cr>
 
 syntax on
 colorscheme grb2
