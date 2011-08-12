@@ -40,8 +40,6 @@ set ruler
 set hidden
 nmap <silent> <leader>d :bd<cr>
 nmap <silent> <leader>D :bd!<cr>
-nmap <silent> <leader>n :bn<cr>
-nmap <silent> <leader>p :bp<cr>
 
 " Status Line
 set statusline=
