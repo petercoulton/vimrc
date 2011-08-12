@@ -27,6 +27,7 @@ set expandtab
 set autoindent
 set virtualedit=all
 set backspace=indent,eol,start
+set scrolloff=7
 
 "set list
 set listchars=tab:▷⋅
